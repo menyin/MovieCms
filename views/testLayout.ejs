@@ -1,0 +1,8 @@
+<p style="background:red;">这是子页面</p>
+<p>标题：<%= title %></p>
+<!--普通引入部分视图功能-->
+<% include _partials %>
+<!--类似于art-template遍历模板功能-->
+<% items.forEach(function(listitem){ %>
+　　　　　　　　<% include _partials2 %>
+　　　　　　　　<% }) %>
