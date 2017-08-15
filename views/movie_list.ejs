@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <style>
+        .movie {
+            height:40px;
+            line-height: 40px;
+            background: #04804e;;
+        }
+        .movie:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .movie_item {
+            width: 11%;
+            height:40px;
+            float: left;
+            list-style: none;
+            overflow: hidden;
+
+        }
+
+        .movie:nth-of-type(2n) {
+            background: #7ccdbb;
+        }
+        .movie_item label {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<h1><%= title %> <span style="font-size:16px;bold:normal;">>>></span></h1>
+
+<% movies.forEach(function (movie) { %>
+    <ul class="movie">
+        <li class="movie_item"><label>导演：</label><span><%= movie.doctor %></span></li>
+        <li class="movie_item"><label>影名：</label><span><%= movie.title %></span></li>
+        <li class="movie_item"><label>语言：</label><span><%= movie.language %></span></li>
+        <li class="movie_item"><label>国家：</label><span><%= movie.country %></span></li>
+        <li class="movie_item"><label>概要：</label><span><%= movie.summary %></span></li>
+        <li class="movie_item"><label>插件：</label><span><%= movie.flash%></span></li>
+        <li class="movie_item"><label>上传者：</label><span><%= movie.poster %></span></li>
+        <li class="movie_item"><label>年份：</label><span><%= movie.year %></span></li>
+        <li class="movie_item">
+            <a href="/movie/delete/<%=movie._id%>">删除</a>&nbsp;&nbsp;
+            <a href="/movie/update/<%=movie._id%>">修改</a>&nbsp;&nbsp;
+            <a href="/movie/details/<%=movie._id%>">详情</a>
+        </li>
+    </ul>
+<% }); %>
+</body>
+</html>

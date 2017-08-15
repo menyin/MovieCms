@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>欢迎来到：<%= title %></h1>
+    <form action="/movie/update" name="movie" method="post">
+        <input type="hidden" name="id" value="<%=movie._id%>"/>
+        <p><label for="doctor">doctor</label><input id="doctor" name="doctor" type="text" value="<%=movie.doctor%>"/></p>
+        <p><label for="title">title</label><input id="title" name="title" type="text" value="<%=movie.title%>"/></p>
+        <p><label for="language">language</label><input id="language" name="language" type="text" value="<%=movie.language%>"/></p>
+        <p><label for="country">country</label><input id="country" name="country" type="text" value="<%=movie.country%>"/></p>
+        <p><label for="summary">summary</label><input id="summary" name="summary" type="text" value="<%=movie.summary%>"/></p>
+        <p><label for="flash">flash</label><input id="flash" name="flash" type="text" value="<%=movie.flash%>"/></p>
+        <p><label for="poster">poster</label><input id="poster" name="poster" type="text" value="<%=movie.poster%>"/></p>
+        <p><label for="year">year</label><input id="year" name="year" type="text" value="<%=movie.year%>"/></p>
+        <p><input type="submit" value="更新"/></p>
+    </form>
+</body>
+</html>

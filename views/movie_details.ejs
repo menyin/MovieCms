@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul class="movie" data-id="<%=movie._id%>">
+      <li class="movie_item"><label>导演：</label><span><%= movie.doctor %></span></li>
+      <li class="movie_item"><label>影名：</label><span><%= movie.title %></span></li>
+      <li class="movie_item"><label>语言：</label><span><%= movie.language %></span></li>
+      <li class="movie_item"><label>国家：</label><span><%= movie.country %></span></li>
+      <li class="movie_item"><label>概要：</label><span><%= movie.summary %></span></li>
+      <li class="movie_item"><label>插件：</label><span><%= movie.flash%></span></li>
+      <li class="movie_item"><label>上传者：</label><span><%= movie.poster %></span></li>
+      <li class="movie_item"><label>年份：</label><span><%= movie.year %></span></li>
+    </ul>
+  </body>
+</html>
